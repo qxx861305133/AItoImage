@@ -1,4 +1,4 @@
-# hello-world
+# 静态生成
 
 ## Project setup
 ```
