@@ -26,7 +26,6 @@ export default {
   methods: {
     startRecognition() {
       if (annyang) {
-        this.loadImages()
         annyang.start({ autoRestart: false, continuous: false });
         // 设置识别语言为中文
         annyang.setLanguage('zh-CN');
@@ -35,6 +34,7 @@ export default {
           console.log('phrases', phrases)
           if (phrases && phrases.length > 0) {
             this.recognizedText = phrases[0];
+            this.loadImages()
           }
         });
       } else {
