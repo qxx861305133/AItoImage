@@ -1,6 +1,7 @@
 <template>
   <div>
     <button @click="startRecognition">开始识别</button>
+    <span>识别内容:{{recognizedText}}</span>
     <p>{{ recognizedText }}</p>
     <ul class="flex-wrap img-box">
       <li v-for="item in imgList" :key="item">
